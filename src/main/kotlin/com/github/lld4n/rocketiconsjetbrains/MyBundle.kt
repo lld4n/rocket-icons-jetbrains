@@ -1,4 +1,4 @@
-package org.jetbrains.plugins.template
+package com.github.lld4n.rocketiconsjetbrains
 
 import com.intellij.DynamicBundle
 import org.jetbrains.annotations.NonNls

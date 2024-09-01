@@ -1,18 +1,17 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.lld4n.rocketiconsjetbrains</id>
-    <name>rocket-icons-jetbrains</name>
+    <name>Rocket Icons</name>
     <vendor>lld4n</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
-    <resource-bundle>messages.MyBundle</resource-bundle>
-
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.lld4n.rocketiconsjetbrains.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <iconProvider
+                implementation="com.github.lld4n.rocketiconsjetbrains.IconProvider"
+                order="first"
+                id="IconProvider"
+        />
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.lld4n.rocketiconsjetbrains.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
-    </applicationListeners>
 </idea-plugin>

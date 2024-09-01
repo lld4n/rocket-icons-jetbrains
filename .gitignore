@@ -5,4 +5,7 @@
 build
 node_modules
 src/main/kotlin/com/github/lld4n/rocketiconsjetbrains/Icons.kt
-src/main/resources/icons
+src/main/resources/icons/duo
+src/main/resources/icons/outline
+src/main/resources/icons/filled
+src/main/resources/icons/logo

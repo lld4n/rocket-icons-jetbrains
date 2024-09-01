@@ -4,3 +4,5 @@
 .qodana
 build
 node_modules
+src/main/kotlin/com/github/lld4n/rocketiconsjetbrains/Icons.kt
+src/main/resources/icons/*

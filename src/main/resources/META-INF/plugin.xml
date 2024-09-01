@@ -12,6 +12,18 @@
                 order="first"
                 id="IconProvider"
         />
+        <applicationConfigurable
+                parentId="appearance"
+                groupId="com.github.lld4n.rocketiconsjetbrains"
+                displayName="Rocket Icons"
+                instance="com.github.lld4n.rocketiconsjetbrains.settings.PluginSettings"
+                id="PluginSettings"
+        />
+        <applicationService
+                serviceImplementation="com.github.lld4n.rocketiconsjetbrains.settings.PluginSettingsState"
+        />
+        <statusBarWidgetFactory implementation="com.github.lld4n.rocketiconsjetbrains.RocketStatusBarWidgetFactory"
+                                id="Rocket Icons Widget"/>
     </extensions>
 
 </idea-plugin>

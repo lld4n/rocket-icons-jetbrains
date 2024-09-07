@@ -12,7 +12,8 @@ import javax.swing.JComponent
 
 
 class PluginSettings : Configurable {
-    private val component = PluginSettingsComponent(PluginSettingsState.instance.variant)
+    private val component =
+        PluginSettingsComponent(PluginSettingsState.instance.variant, PluginSettingsState.instance.subtype)
 
     override fun createComponent(): JComponent {
         return component.view
@@ -20,11 +21,11 @@ class PluginSettings : Configurable {
 
     private fun packChanged(): Boolean {
         val state = PluginSettingsState.instance
-        return component.iconPack.variant != state.variant
+        return component.variantView.variant != state.variant
+                || component.subtypeView.variant != state.subtype
     }
 
     override fun isModified(): Boolean {
-//        val state = PluginSettingsState.instance
         return packChanged()
     }
 
@@ -32,7 +33,8 @@ class PluginSettings : Configurable {
         val state = PluginSettingsState.instance
 
         if (packChanged()) {
-            state.variant = component.iconPack.variant
+            state.variant = component.variantView.variant
+            state.subtype = component.subtypeView.variant
             restart()
         }
 

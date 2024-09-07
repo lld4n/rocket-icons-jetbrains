@@ -5,8 +5,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.IconLoader
 import com.intellij.openapi.wm.StatusBarWidget
 import com.intellij.openapi.wm.StatusBarWidgetFactory
-import com.intellij.util.Consumer
-import java.awt.event.MouseEvent
 import javax.swing.Icon
 
 class RocketStatusBarWidgetFactory : StatusBarWidgetFactory {

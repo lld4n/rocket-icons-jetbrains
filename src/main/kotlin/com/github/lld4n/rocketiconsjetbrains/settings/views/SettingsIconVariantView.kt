@@ -8,7 +8,7 @@ import java.awt.Component
 import java.awt.FlowLayout
 import javax.swing.JPanel
 
-class SettingsIconPackView(private val currentVariant: String) : JPanel() {
+class SettingsIconVariantView(private val currentVariant: String) : JPanel() {
     private val dropdown = ComboBox<Variant>()
 
     val variant: String

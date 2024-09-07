@@ -3,7 +3,7 @@
 //     "ai" to adobe_ai,
 // )
 
-import { IconVariant, rocket } from "../rocket-icons";
+import { folders, IconVariant, rocket } from "../rocket-icons";
 import { named } from "./kt";
 
 export function kt_map() {
@@ -19,6 +19,15 @@ export function kt_map() {
     map += `)\n`;
     md += map;
   }
+
+  let map = `\nval folders = mapOf(\n`;
+  for (const icon of folders) {
+    for (const filename of icon.filenames) {
+      map += `"${filename}" to ${icon.icon}_folders,\n`;
+    }
+  }
+  map += `)\n`;
+  md += map;
 
   return md;
 }

@@ -12,6 +12,7 @@ import com.intellij.util.xmlb.XmlSerializerUtil
 )
 class PluginSettingsState : PersistentStateComponent<PluginSettingsState> {
     var variant = Variant.DUO.id
+    var subtype = Subtype.FOLDER.id
 
     companion object {
         val instance: PluginSettingsState

@@ -1,5 +1,6 @@
 package com.github.lld4n.rocketiconsjetbrains
 
+import com.github.lld4n.rocketiconsjetbrains.settings.PluginSettingsState
 import com.intellij.ide.IconProvider
 import com.intellij.psi.PsiElement
 import com.intellij.psi.util.PsiUtilCore
@@ -8,6 +9,7 @@ import javax.swing.Icon
 
 class IconProvider : IconProvider() {
     private var icons = IconPack.instance.icons
+    private var state = PluginSettingsState.instance
 
     override fun getIcon(element: PsiElement, flag: Int): Icon? {
         val virtualFile = PsiUtilCore.getVirtualFile(element)
@@ -24,7 +26,12 @@ class IconProvider : IconProvider() {
                 return icons.folders[name]
             }
 
-            return icons.folder_common;
+            return if (state.subtype == "folder") {
+                icons.folder_common
+            } else {
+                icons.rectangle_common;
+            }
+
         }
 
         val file = icons.files[name]

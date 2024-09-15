@@ -19,7 +19,7 @@ enum class Variant(val id: String, private val label: String) {
 
 
 enum class Subtype(val id: String, private val label: String) {
-    FOLDER("folder", "Folder"),
+    FOLDERS("folders", "Folder"),
     RECTANGLE("rectangle", "Rectangle");
 
     override fun toString(): String {
